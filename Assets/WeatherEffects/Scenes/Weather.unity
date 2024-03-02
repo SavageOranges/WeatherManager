@@ -9853,6 +9853,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   externalIP: 
+  locationData:
+    country: 
+    countryCode: 
+    region: 
+    regionName: 
+    city: 
   hasLocationData: 0
   customCity: 
 --- !u!114 &531670674

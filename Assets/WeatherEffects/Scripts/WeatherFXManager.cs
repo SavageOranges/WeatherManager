@@ -72,16 +72,24 @@ public class WeatherFXManager : MonoBehaviour
         WAM = GetComponent<WeatherApiManager>();
     }
 
-    IEnumerator Start()
+    private void Start()
     {
-        Debug.Log("WeatherManagerFX Start");
+        StartCoroutine(SetWeatherConditionsCoroutine());
+    }
 
+    public void SetWeatherConditions()
+    {
+        StartCoroutine(SetWeatherConditionsCoroutine());
+    }
+
+    private IEnumerator SetWeatherConditionsCoroutine()
+    {
         while (!WAM.hasWeatherData)
         {
             yield return null;
         }
 
-        Debug.Log("WeatherApiManager has data");
+        Debug.Log("WeatherApiManager has data.");
         ParseCurrentTime();
         ParseCurrentWeather();
     }
@@ -109,6 +117,9 @@ public class WeatherFXManager : MonoBehaviour
                 RenderSettings.skybox = timeOfDayFxData.timeOfDayFx[4].skyboxMaterial;
                 break;
             case TimesOfDay.Night:
+                RenderSettings.skybox = timeOfDayFxData.timeOfDayFx[5].skyboxMaterial;
+                break;
+            case TimesOfDay.Overnight:
                 RenderSettings.skybox = timeOfDayFxData.timeOfDayFx[5].skyboxMaterial;
                 break;
         }

@@ -159,8 +159,13 @@ public class LocationServicesManager : MonoBehaviour
         else
         {
             locationData.city = customCity;
+
             WeatherApiManager WAM = FindObjectOfType<WeatherApiManager>();
+            WAM.hasWeatherData = false;
             WAM.GetWeatherData();
+
+            WeatherFXManager WFXM = FindObjectOfType<WeatherFXManager>();
+            WFXM.SetWeatherConditions();
         }
     }
 }
