@@ -9860,7 +9860,6 @@ MonoBehaviour:
     regionName: 
     city: 
   hasLocationData: 0
-  customCity: 
 --- !u!114 &531670674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9892,7 +9891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f46b68b6e4114644a9a42ecc4f086f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weatherApiKey: 
   weatherData:
     location:
       name: 
