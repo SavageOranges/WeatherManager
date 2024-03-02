@@ -10,7 +10,7 @@ This can be overriden with a manual 'City' string entry for more accurate result
 IPV6 will give a more accurate location, but no free services to get this data exist that I know of.
 
 ## Instructions
-All files are in `Assets/WeatherEffects`.
+All files are in `Assets/WeatherEffects`. A demo scene is provided in `Assets/WeatherEffects/Scenes/Weather`.
 
 Get your own WeatherAPI key from https://www.weatherapi.com/ and add it to the designated inspector field in the `WeatherApiManager` component on the `WeatherManager` GameObject.
 
@@ -20,7 +20,11 @@ The `WeatherFXManager` component on the `WeatherManager` GameObject contains dro
 
 The `LocationServicesManager` component on the `WeatherManager` GameObject allows you to input a city name and update location and weather data manually.
 
+![Weather Manager Components](https://github.com/SavageOranges/WeatherManager/blob/main/Previews/WeatherManagerComponentsPreview.png)
+
 There is a custom ScriptableObject class and entry, `TimeOfDayFx`, that allows you to define timespans and custom skyboxes for each time of day.
+
+![TimeOfDayFX ScriptableObject](https://github.com/SavageOranges/WeatherManager/blob/main/Previews/TimeOfDayFXPreview.png)
 
 ## Compatibility
 Supports Unity 2021.3.0f1 and above.
